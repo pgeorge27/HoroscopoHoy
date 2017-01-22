@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Tu Horoscopo
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home" padding>	
+	<ion-list>	
+		<ion-item *ngFor="let movie of movies" (click)="itemTapped($event, movie)">
+			<ion-avatar item-left>
+				<img src="../../assets/image/{{movie.img_image}}.png"/>
+			</ion-avatar>
+			<h2>{{movie.paneltitle_value_2}}</h2>
+			<p class="item-description">{{movie.paneltitle_value_1}}</p>
+		</ion-item>
+	</ion-list>
+</ion-content>
